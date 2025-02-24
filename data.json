@@ -1,0 +1,30 @@
+{
+  "jadwal": [
+    {
+      "hari": "Senin",
+      "mapel": "Matematika",
+      "guru": "Pak Budi",
+      "jam": "08:00 - 09:30"
+    },
+    {
+      "hari": "Selasa",
+      "mapel": "Bahasa Inggris",
+      "guru": "Bu Siti",
+      "jam": "10:00 - 11:30"
+    }
+  ],
+  "materi": [
+    {
+      "mapel": "Matematika",
+      "judul": "Aljabar Dasar",
+      "link": "https://drive.google.com/materi-matematika"
+    }
+  ],
+  "pengumuman": [
+    {
+      "judul": "Ujian Tengah Semester",
+      "tanggal": "25 Maret 2025",
+      "isi": "Ujian dimulai pukul 08:00 WIB. Harap datang tepat waktu!"
+    }
+  ]
+}

@@ -1,35 +1,34 @@
-/* Set warna background utama */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; /* Warna hitam */
-    color: white; /* Warna teks putih */
-    text-align: center;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Container utama */
-.container {
-    width: 85%;
-    margin: auto;
+/* Background utama */
+body {
+    background-color: #121212; /* Warna hitam */
+    color: white; /* Warna teks */
+    text-align: center;
+}
+
+/* Header */
+header {
     padding: 20px;
+    background-color: #1e1e1e;
+    border-bottom: 3px solid #33ff57; /* Garis hijau neon */
 }
 
-/* Styling logo */
-.logo {
-    display: block;
-    margin: 10px auto;
-    width: 160px;
-    height: auto;
-}
-
-/* Judul utama */
 h1 {
     font-size: 28px;
-    color: #33ff57; /* Warna hijau neon */
 }
 
-/* Navigasi */
+.highlight {
+    color: #33ff57;
+}
+
+/* Navbar */
 .navbar {
     margin-top: 15px;
 }
@@ -38,15 +37,27 @@ h1 {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    margin: 0 15px;
+    margin: 0 10px;
     font-size: 16px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
-    color: #33ff57; /* Warna hijau saat hover */
+    background: #33ff57;
+    color: black;
 }
 
-/* Kotak Chat */
+/* Container utama */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Chat box */
 .chat-box {
     background-color: rgba(255, 255, 255, 0.1);
     width: 50%;
@@ -56,7 +67,7 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
 }
 
-/* Input chat */
+/* Chat input */
 input[type="text"] {
     width: 70%;
     padding: 10px;
@@ -66,7 +77,6 @@ input[type="text"] {
     border-radius: 5px;
 }
 
-/* Tombol Kirim */
 button {
     padding: 10px 15px;
     border: none;
@@ -86,4 +96,9 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: gray;
+}
+
+/* Warna merah untuk judul penting */
+.red {
+    color: #ff3333;
 }

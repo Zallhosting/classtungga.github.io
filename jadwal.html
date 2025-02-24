@@ -4,52 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Pelajaran</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Pastikan ada file CSS -->
 </head>
 <body>
-    <h2>Jadwal Pelajaran</h2>
-    <label for="hari">Pilih Hari:</label>
-    <select id="hari" onchange="tampilkanJadwal()">
-        <option value="senin">Senin</option>
-        <option value="selasa">Selasa</option>
-        <option value="rabu">Rabu</option>
-        <option value="kamis">Kamis</option>
-        <option value="jumat">Jumat</option>
-        <option value="sabtu">Sabtu</option>
-    </select>
+
+    <h2>📅 Jadwal Pelajaran</h2>
 
     <table border="1">
-        <thead>
-            <tr>
-                <th>Waktu</th>
-                <th>Mata Pelajaran</th>
-            </tr>
-        </thead>
-        <tbody id="jadwalTabel">
-            <!-- Data jadwal akan dimasukkan di sini -->
-        </tbody>
+        <tr>
+            <th>Jam</th>
+            <th>Senin</th>
+            <th>Selasa</th>
+            <th>Rabu</th>
+            <th>Kamis</th>
+            <th>Jumat</th>
+            <th>Sabtu</th>
+        </tr>
+        <tr>
+            <td>07.45 - 08.30</td>
+            <td rowspan="2">IPS</td>
+            <td rowspan="1">MATH</td>
+            <td rowspan="1">IPA</td>
+            <td rowspan="1">ENG</td>
+            <td rowspan="2">PJOK</td>
+            <td rowspan="2">WALAS/XPRESSION TIME/SENAM</td>
+        </tr>
+        <tr>
+            <td>08.30 - 09.15</td>
+            <td rowspan="1">ENG</td>
+            <td rowspan="1">IPA</td>
+            <td rowspan="1">MATH</td>
+            <td>SPORT TIME</td>
+        </tr>
+        <tr>
+            <td>09.15 - 10.00</td>
+            <td>ART</td>
+            <td rowspan="2">ENG</td>
+            <td>PAI/K</td>
+            <td>MATH</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>10.00 - 10.30</td>
+            <td colspan="4" style="text-align: center; background: yellow;">⏳ ISTIRAHAT</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>10.30 - 11.15</td>
+            <td rowspan="2">IPA</td>
+            <td rowspan="2">B IN</td>
+            <td>IPS</td>
+            <td rowspan="2">PAI/PAK</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>11.15 - 12.00</td>
+            <td>ART</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>12.00 - 12.45</td>
+            <td colspan="4" style="text-align: center; background: yellow;">⏳ ISTIRAHAT</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>12.45 - 13.30</td>
+            <td>IPS</td>
+            <td rowspan="2">PP</td>
+            <td>MATH</td>
+            <td>PJOK</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>13.30 - 14.15</td>
+            <td rowspan="2">B IN</td>
+            <td rowspan="2">PP</td>
+            <td>INF</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>14.15 - 15.00</td>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td>09.15 - 09.30</td>
+            <td colspan="4"></td>
+            <td>MATH</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10.15 - 11.00</td>
+            <td colspan="4"></td>
+            <td>B IN</td>
+            <td>PENGEMBANGAN DIRI</td>
+        </tr>
     </table>
 
-    <script>
-        async function tampilkanJadwal() {
-            let hari = document.getElementById("hari").value;
-            let response = await fetch("data.json");
-            let data = await response.json();
+    <br>
+    <a href="index.html">⬅ Kembali ke Dashboard</a>
 
-            let jadwalTabel = document.getElementById("jadwalTabel");
-            jadwalTabel.innerHTML = "";
-
-            data.jadwal[hari].forEach(item => {
-                let row = `<tr>
-                    <td>${item.waktu}</td>
-                    <td>${item.pelajaran}</td>
-                </tr>`;
-                jadwalTabel.innerHTML += row;
-            });
-        }
-
-        // Tampilkan jadwal hari Senin saat halaman pertama kali dibuka
-        tampilkanJadwal();
-    </script>
 </body>
 </html>

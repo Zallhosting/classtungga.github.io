@@ -1,104 +1,29 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Styling umum */
+body {
+    background-color: black;
+    color: white;
     font-family: Arial, sans-serif;
 }
 
-/* Background utama */
-body {
-    background-color: #121212; /* Warna hitam */
-    color: white; /* Warna teks */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
     text-align: center;
 }
 
-/* Header */
-header {
-    padding: 20px;
-    background-color: #1e1e1e;
-    border-bottom: 3px solid #33ff57; /* Garis hijau neon */
-}
-
-h1 {
-    font-size: 28px;
-}
-
-.highlight {
-    color: #33ff57;
-}
-
-/* Navbar */
-.navbar {
-    margin-top: 15px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 10px;
-    font-size: 16px;
-    padding: 8px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    background: #33ff57;
-    color: black;
-}
-
-/* Container utama */
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Chat box */
-.chat-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 50%;
-    margin: 15px auto;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
-}
-
-/* Chat input */
-input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #33ff57;
-    background-color: #1e1e1e;
-    color: white;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #33ff57;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #28cc47;
-}
-
-/* Footer */
-footer {
-    margin-top: 20px;
-    font-size: 14px;
-    color: gray;
-}
-
-/* Warna merah untuk judul penting */
-.red {
-    color: #ff3333;
-}
+/* Warna khusus untuk setiap mata pelajaran */
+.ips { background-color: pink; color: black; } /* IPS */
+.art { background-color: yellow; color: black; } /* ART */
+.ipa { background-color: blue; color: white; } /* IPA */
+.bin { background-color: purple; color: white; } /* B. IND */
+.math { background-color: green; color: white; } /* MATH */
+.pp { background-color: gray; color: white; } /* PP */
+.pai { background-color: lightgray; color: black; } /* PAI */
+.pjok { background-color: orange; color: black; } /* PJOK */
+.inf { background-color: darkgoldenrod; color: white; } /* INF */

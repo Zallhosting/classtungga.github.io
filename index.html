@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TUNGGA.AI - Smart Classroom</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
 </head>
 <body>
 
     <header>
-      <img class="logo" src="logo.png" alt="TUNGGA.AI Logo">
-
-        <h1>🤖 Selamat Datang di <span class="highlight">TUNGGA.AI</span></h1>
+        <h1>🧠 Selamat Datang di <span class="highlight">TUNGGA.AI</span></h1>
         <p>AI-powered Smart Classroom</p>
     </header>
 
-    <nav>
+    <nav class="navbar">
         <a href="jadwal.html">📅 Jadwal</a>
         <a href="materi.html">📚 Materi</a>
         <a href="absensi.html">✅ Absensi</a>
@@ -23,27 +22,28 @@
         <a href="forum.html">💬 Forum</a>
     </nav>
 
-    <section class="about">
-        <h2>📌 Tentang TUNGGA.AI</h2>
+    <section class="container">
+        <h2>📌 <span class="red">Tentang TUNGGA.AI</span></h2>
         <p>TUNGGA.AI adalah asisten AI untuk membantu siswa dan guru dalam mengakses informasi, absensi, dan diskusi dalam satu platform.</p>
-    </section>
 
-    <section class="chat-container">
-        <h2>💬 Chat dengan TUNGGA.AI</h2>
-        <div class="chat-box" id="chatBox">
-            <p><b>TUNGGA.AI:</b> Halo! Apa yang bisa saya bantu?</p>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="userInput" placeholder="Ketik pertanyaan..." onkeydown="checkEnter(event)">
+        <h2>💬 <span class="red">Chat dengan TUNGGA.AI</span></h2>
+        <p><strong>TUNGGA.AI:</strong> Halo! Apa yang bisa saya bantu?</p>
+
+        <div class="chat-box">
+            <input type="text" placeholder="Ketik pertanyaan..." id="chat-input">
             <button onclick="sendMessage()">Kirim</button>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 TUNGGA.AI | Dibuat untuk kemudahan belajar</p>
+        &copy; 2025 <span class="highlight">TUNGGA.AI</span> | Dibuat untuk kemudahan belajar
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function sendMessage() {
+            alert("Fitur chat belum tersedia!");
+        }
+    </script>
 
 </body>
 </html>

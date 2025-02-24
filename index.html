@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUNGGA.AI - Dashboard</title>
+    <title>TUNGGA.AI - Smart Classroom</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>🤖 Selamat Datang di <span style="color: #00ff88;">TUNGGA.AI</span></h1>
+        <img src="assets/logo.png" alt="TUNGGA.AI Logo" class="logo">
+        <h1>🤖 Selamat Datang di <span class="highlight">TUNGGA.AI</span></h1>
         <p>AI-powered Smart Classroom</p>
     </header>
-    
+
     <nav>
-        <button onclick="window.location.href='jadwal.html'">📅 Jadwal</button>
-        <button onclick="window.location.href='materi.html'">📚 Materi</button>
-        <button onclick="window.location.href='absensi.html'">✅ Absensi</button>
-        <button onclick="window.location.href='pengumuman.html'">📌 Pengumuman</button>
-        <button onclick="window.location.href='forum.html'">💬 Forum</button>
+        <a href="jadwal.html">📅 Jadwal</a>
+        <a href="materi.html">📚 Materi</a>
+        <a href="absensi.html">✅ Absensi</a>
+        <a href="pengumuman.html">📢 Pengumuman</a>
+        <a href="forum.html">💬 Forum</a>
     </nav>
 
-    <section id="tentang">
-        <h2>📌 Tentang <span style="color: red;">TUNGGA.AI</span></h2>
-        <p>
-            TUNGGA.AI adalah asisten AI untuk membantu siswa dan guru dalam mengakses informasi, absensi, dan diskusi dalam satu platform.
-        </p>
-        <h2>💬 Chat dengan <span style="color: red;">TUNGGA.AI</span></h2>
-        <div id="chatbox">
-            <p><strong>TUNGGA.AI:</strong> Halo! Apa yang bisa saya bantu?</p>
-            <input type="text" placeholder="Ketik pertanyaan...">
-            <button>Kirim</button>
+    <section class="chat-container">
+        <h2>Chat dengan TUNGGA.AI</h2>
+        <div class="chat-box" id="chatBox">
+            <p><b>TUNGGA.AI:</b> Halo! Apa yang bisa saya bantu?</p>
         </div>
+        <input type="text" id="userInput" placeholder="Ketik pertanyaan...">
+        <button onclick="sendMessage()">Kirim</button>
     </section>
 
-    <footer>
-        <p>&copy; 2025 <span style="color: #00ff88;">TUNGGA.AI</span> | Dibuat untuk kemudahan belajar</p>
-    </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>

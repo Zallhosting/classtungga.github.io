@@ -58,7 +58,7 @@ td {
 }
 
 /* Ukuran Kolom Sabtu Biar Lebih Luas */
-td[colspan="2"], td[colspan="4"] {
+td[colspan="2" ], td[colspan="4"] {
     text-align: center;
 }
 

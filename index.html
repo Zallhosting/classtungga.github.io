@@ -22,14 +22,25 @@
         <a href="forum.html">💬 Forum</a>
     </nav>
 
+    <section class="about">
+        <h2>📌 Tentang TUNGGA.AI</h2>
+        <p>TUNGGA.AI adalah asisten AI untuk membantu siswa dan guru dalam mengakses informasi, absensi, dan diskusi dalam satu platform.</p>
+    </section>
+
     <section class="chat-container">
-        <h2>Chat dengan TUNGGA.AI</h2>
+        <h2>💬 Chat dengan TUNGGA.AI</h2>
         <div class="chat-box" id="chatBox">
             <p><b>TUNGGA.AI:</b> Halo! Apa yang bisa saya bantu?</p>
         </div>
-        <input type="text" id="userInput" placeholder="Ketik pertanyaan...">
-        <button onclick="sendMessage()">Kirim</button>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ketik pertanyaan..." onkeydown="checkEnter(event)">
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
     </section>
+
+    <footer>
+        <p>© 2025 TUNGGA.AI | Dibuat untuk kemudahan belajar</p>
+    </footer>
 
     <script src="script.js"></script>
 

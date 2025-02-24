@@ -1,76 +1,89 @@
+/* Set warna background utama */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: #121212; /* Warna hitam */
+    color: white; /* Warna teks putih */
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-    color: #d62828;
-    margin-bottom: 15px;
-    font-size: 22px;
+/* Container utama */
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 20px;
 }
 
-table {
-    width: 95%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+/* Styling logo */
+.logo {
+    display: block;
+    margin: 10px auto;
+    width: 160px;
+    height: auto;
 }
 
-th, td {
-    border: 2px solid black;
-    padding: 8px;
-    text-align: center;
+/* Judul utama */
+h1 {
+    font-size: 28px;
+    color: #33ff57; /* Warna hijau neon */
+}
+
+/* Navigasi */
+.navbar {
+    margin-top: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
     font-weight: bold;
-    font-size: 14px;
-}
-
-th {
-    background-color: #ddd;
-    color: black;
-}
-
-td {
-    min-width: 90px;
-}
-
-/* Warna Mata Pelajaran Sesuai Contoh */
-.ips { background-color: #F4CCCC; }
-.math { background-color: #B6D7A8; }
-.ipa { background-color: #A4C2F4; }
-.eng { background-color: #76A5AF; color: white; }
-.art { background-color: #FFD966; }
-.pai { background-color: #D9D2E9; }
-.pjok { background-color: #F6B26B; }
-.bindo { background-color: #C27BA0; color: white; }
-.inf { background-color: #76D7C4; }
-.pp { background-color: #8E7CC3; color: white; }
-.walas { background-color: #EAD1DC; }
-.sport { background-color: #CFE2F3; }
-.pengembangan { background-color: #FFFF99; }
-
-/* Gaya Istirahat */
-.istirahat td {
-    background-color: yellow;
-    font-weight: bold;
+    margin: 0 15px;
     font-size: 16px;
 }
 
-/* Ukuran Kolom Sabtu Biar Lebih Luas */
-td[colspan="2" ], td[colspan="4"] {
-    text-align: center;
+.navbar a:hover {
+    color: #33ff57; /* Warna hijau saat hover */
 }
 
-/* Link Kembali */
-.back-link {
-    color: #d62828;
+/* Kotak Chat */
+.chat-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+/* Input chat */
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #33ff57;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Tombol Kirim */
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #33ff57;
+    color: black;
     font-weight: bold;
-    text-decoration: none;
-    display: block;
-    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.back-link:hover {
-    text-decoration: underline;
+button:hover {
+    background-color: #28cc47;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
 }

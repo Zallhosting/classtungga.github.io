@@ -1,30 +1,63 @@
 {
-  "jadwal": [
-    {
-      "hari": "Senin",
-      "mapel": "Matematika",
-      "guru": "Pak Budi",
-      "jam": "08:00 - 09:30"
-    },
-    {
-      "hari": "Selasa",
-      "mapel": "Bahasa Inggris",
-      "guru": "Bu Siti",
-      "jam": "10:00 - 11:30"
-    }
-  ],
-  "materi": [
-    {
-      "mapel": "Matematika",
-      "judul": "Aljabar Dasar",
-      "link": "https://drive.google.com/materi-matematika"
-    }
-  ],
-  "pengumuman": [
-    {
-      "judul": "Ujian Tengah Semester",
-      "tanggal": "25 Maret 2025",
-      "isi": "Ujian dimulai pukul 08:00 WIB. Harap datang tepat waktu!"
-    }
-  ]
+  "jadwal": {
+    "senin": [
+      { "waktu": "07.45 - 08.30", "pelajaran": "IPS" },
+      { "waktu": "08.30 - 09.15", "pelajaran": "IPS" },
+      { "waktu": "09.15 - 10.00", "pelajaran": "ART" },
+      { "waktu": "10.00 - 10.30", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "10.30 - 11.15", "pelajaran": "IPA" },
+      { "waktu": "11.15 - 12.00", "pelajaran": "B IN" },
+      { "waktu": "12.00 - 12.45", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "12.45 - 13.30", "pelajaran": "IPA" },
+      { "waktu": "13.30 - 14.15", "pelajaran": "B IN" },
+      { "waktu": "14.15 - 15.00", "pelajaran": "B IN" }
+    ],
+    "selasa": [
+      { "waktu": "07.45 - 08.30", "pelajaran": "MATH" },
+      { "waktu": "08.30 - 09.15", "pelajaran": "ENG" },
+      { "waktu": "09.15 - 10.00", "pelajaran": "ENG" },
+      { "waktu": "10.00 - 10.30", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "10.30 - 11.15", "pelajaran": "B IN" },
+      { "waktu": "11.15 - 12.00", "pelajaran": "PP" },
+      { "waktu": "12.00 - 12.45", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "12.45 - 13.30", "pelajaran": "IPS" },
+      { "waktu": "13.30 - 14.15", "pelajaran": "PP" },
+      { "waktu": "14.15 - 15.00", "pelajaran": "PP" }
+    ],
+    "rabu": [
+      { "waktu": "07.45 - 08.30", "pelajaran": "IPA" },
+      { "waktu": "08.30 - 09.15", "pelajaran": "IPA" },
+      { "waktu": "09.15 - 10.00", "pelajaran": "PAI/K" },
+      { "waktu": "10.00 - 10.30", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "10.30 - 11.15", "pelajaran": "IPS" },
+      { "waktu": "11.15 - 12.00", "pelajaran": "ART" },
+      { "waktu": "12.00 - 12.45", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "12.45 - 13.30", "pelajaran": "MATH" },
+      { "waktu": "13.30 - 14.15", "pelajaran": "MATH" }
+    ],
+    "kamis": [
+      { "waktu": "07.45 - 08.30", "pelajaran": "ENG" },
+      { "waktu": "08.30 - 09.15", "pelajaran": "MATH" },
+      { "waktu": "09.15 - 10.00", "pelajaran": "PAI/PAK" },
+      { "waktu": "10.00 - 10.30", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "10.30 - 11.15", "pelajaran": "PAI/PAK" },
+      { "waktu": "11.15 - 12.00", "pelajaran": "INF" },
+      { "waktu": "12.00 - 12.45", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "12.45 - 13.30", "pelajaran": "INF" }
+    ],
+    "jumat": [
+      { "waktu": "07.45 - 08.30", "pelajaran": "PJOK" },
+      { "waktu": "08.30 - 09.15", "pelajaran": "PJOK" },
+      { "waktu": "09.15 - 09.30", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "09.30 - 10.15", "pelajaran": "MATH" },
+      { "waktu": "10.15 - 11.00", "pelajaran": "B IN" }
+    ],
+    "sabtu": [
+      { "waktu": "07.45 - 08.30", "pelajaran": "WALAS/XPRESSION TIME/SENAM" },
+      { "waktu": "08.30 - 09.15", "pelajaran": "SPORT TIME" },
+      { "waktu": "09.15 - 09.30", "pelajaran": "ISTIRAHAT" },
+      { "waktu": "09.30 - 10.15", "pelajaran": "B IN" },
+      { "waktu": "10.15 - 11.00", "pelajaran": "PENGEMBANGAN DIRI" }
+    ]
+  }
 }

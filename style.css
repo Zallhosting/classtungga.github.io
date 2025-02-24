@@ -27,3 +27,78 @@ th, td {
 .pai { background-color: lightgray; color: black; } /* PAI */
 .pjok { background-color: orange; color: black; } /* PJOK */
 .inf { background-color: darkgoldenrod; color: white; } /* INF */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background: #1E5128;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.highlight {
+    color: #4ADE80;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: #4ADE80;
+    color: black;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.chat-box {
+    text-align: left;
+    background: #444;
+    padding: 15px;
+    border-radius: 5px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #4ADE80;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1E5128;
+    color: white;
+}

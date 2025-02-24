@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Pelajaran</title>
-    <link rel="stylesheet" href="style.css"> <!-- Pastikan ada file CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Tambahin CSS biar rapi -->
 </head>
 <body>
 
     <h2>📅 Jadwal Pelajaran</h2>
 
-    <table border="1">
+    <table>
         <tr>
             <th>Jam</th>
             <th>Senin</th>
@@ -23,17 +23,17 @@
         <tr>
             <td>07.45 - 08.30</td>
             <td rowspan="2">IPS</td>
-            <td rowspan="1">MATH</td>
-            <td rowspan="1">IPA</td>
-            <td rowspan="1">ENG</td>
+            <td>MATH</td>
+            <td>IPA</td>
+            <td>ENG</td>
             <td rowspan="2">PJOK</td>
             <td rowspan="2">WALAS/XPRESSION TIME/SENAM</td>
         </tr>
         <tr>
             <td>08.30 - 09.15</td>
-            <td rowspan="1">ENG</td>
-            <td rowspan="1">IPA</td>
-            <td rowspan="1">MATH</td>
+            <td>ENG</td>
+            <td>IPA</td>
+            <td>MATH</td>
             <td>SPORT TIME</td>
         </tr>
         <tr>
@@ -44,9 +44,9 @@
             <td>MATH</td>
             <td colspan="2"></td>
         </tr>
-        <tr>
+        <tr class="istirahat">
             <td>10.00 - 10.30</td>
-            <td colspan="4" style="text-align: center; background: yellow;">⏳ ISTIRAHAT</td>
+            <td colspan="4">⏳ ISTIRAHAT</td>
             <td colspan="2"></td>
         </tr>
         <tr>
@@ -62,9 +62,9 @@
             <td>ART</td>
             <td colspan="2"></td>
         </tr>
-        <tr>
+        <tr class="istirahat">
             <td>12.00 - 12.45</td>
-            <td colspan="4" style="text-align: center; background: yellow;">⏳ ISTIRAHAT</td>
+            <td colspan="4">⏳ ISTIRAHAT</td>
             <td colspan="2"></td>
         </tr>
         <tr>
@@ -101,7 +101,7 @@
     </table>
 
     <br>
-    <a href="index.html">⬅ Kembali ke Dashboard</a>
+    <a href="index.html" class="back-link">⬅ Kembali ke Dashboard</a>
 
 </body>
 </html>

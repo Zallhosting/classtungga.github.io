@@ -1,74 +1,61 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
-    background: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
 }
 
-header {
-    padding: 20px;
-    background: #1E5128;
-    color: white;
+h2 {
+    color: #d62828;
+    margin-bottom: 15px;
 }
 
-.logo {
-    width: 100px;
-    height: auto;
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
 }
 
-.highlight {
-    color: #4ADE80;
-}
-
-nav {
-    background: #333;
+th, td {
+    border: 2px solid black;
     padding: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
-}
-
-nav a:hover {
-    background: #4ADE80;
+th {
+    background-color: #ddd;
     color: black;
 }
 
-.chat-container {
-    max-width: 600px;
-    margin: 30px auto;
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
+/* Warna Mata Pelajaran */
+.ips { background-color: #F4CCCC; }
+.math { background-color: #B6D7A8; }
+.ipa { background-color: #A4C2F4; }
+.eng { background-color: #76A5AF; color: white; }
+.art { background-color: #FFD966; }
+.pai { background-color: #D9D2E9; }
+.pjok { background-color: #F6B26B; }
+.bindo { background-color: #C27BA0; color: white; }
+.inf { background-color: #76D7C4; }
+.pp { background-color: #8E7CC3; color: white; }
+.walas { background-color: #EAD1DC; }
+.sport { background-color: #CFE2F3; }
+.pengembangan { background-color: #FFFF99; }
+
+/* Istirahat */
+.istirahat td {
+    background-color: yellow;
+    font-weight: bold;
 }
 
-.chat-box {
-    text-align: left;
-    background: #444;
-    padding: 15px;
-    border-radius: 5px;
-    height: 300px;
-    overflow-y: auto;
+/* Link Kembali */
+.back-link {
+    color: #d62828;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-input, button {
-    padding: 10px;
-    margin: 5px;
-    font-size: 16px;
-}
-
-button {
-    background: #4ADE80;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #1E5128;
-    color: white;
+.back-link:hover {
+    text-decoration: underline;
 }

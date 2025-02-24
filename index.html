@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Kelas</title>
+    <title>TUNGGA.AI - Smart Classroom</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Logo -->
-    <img src="images/logo.png" alt="Logo Kelas" class="logo">
+    <header>
+        <img src="assets/logo.png" alt="TUNGGA.AI Logo" class="logo">
+        <h1>🤖 Selamat Datang di <span class="highlight">TUNGGA.AI</span></h1>
+        <p>AI-powered Smart Classroom</p>
+    </header>
 
-    <!-- Navigasi -->
-    <nav class="navbar">
+    <nav>
         <a href="jadwal.html">📅 Jadwal</a>
-        <a href="materi.html">📖 Materi</a>
+        <a href="materi.html">📚 Materi</a>
         <a href="absensi.html">✅ Absensi</a>
         <a href="pengumuman.html">📢 Pengumuman</a>
         <a href="forum.html">💬 Forum</a>
-        <a href="#" id="dark-mode">🌙 Mode Gelap</a>
     </nav>
 
-    <!-- Container Fitur -->
-    <div class="container">
-        <div class="fitur"><a href="jadwal.html">📅 Jadwal</a></div>
-        <div class="fitur"><a href="materi.html">📖 Materi</a></div>
-        <div class="fitur"><a href="absensi.html">✅ Absensi</a></div>
-        <div class="fitur"><a href="pengumuman.html">📢 Pengumuman</a></div>
-        <div class="fitur"><a href="forum.html">💬 Forum</a></div>
-    </div>
+    <section class="chat-container">
+        <h2>Chat dengan TUNGGA.AI</h2>
+        <div class="chat-box" id="chatBox">
+            <p><b>TUNGGA.AI:</b> Halo! Apa yang bisa saya bantu?</p>
+        </div>
+        <input type="text" id="userInput" placeholder="Ketik pertanyaan...">
+        <button onclick="sendMessage()">Kirim</button>
+    </section>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -7,20 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h2>Jadwal Pelajaran</h2>
+    <label for="hari">Pilih Hari:</label>
+    <select id="hari" onchange="tampilkanJadwal()">
+        <option value="senin">Senin</option>
+        <option value="selasa">Selasa</option>
+        <option value="rabu">Rabu</option>
+        <option value="kamis">Kamis</option>
+        <option value="jumat">Jumat</option>
+        <option value="sabtu">Sabtu</option>
+    </select>
 
-    <div class="container">
-        <h1>📅 Jadwal Pelajaran</h1>
-        <table id="jadwal-table">
+    <table border="1">
+        <thead>
             <tr>
-                <th>Hari</th>
+                <th>Waktu</th>
                 <th>Mata Pelajaran</th>
-                <th>Guru</th>
-                <th>Jam</th>
             </tr>
-        </table>
-        <a href="index.html">⬅ Kembali</a>
-    </div>
+        </thead>
+        <tbody id="jadwalTabel">
+            <!-- Data jadwal akan dimasukkan di sini -->
+        </tbody>
+    </table>
 
-    <script src="script.js"></script>
+    <script>
+        async function tampilkanJadwal() {
+            let hari = document.getElementById("hari").value;
+            let response = await fetch("data.json");
+            let data = await response.json();
+
+            let jadwalTabel = document.getElementById("jadwalTabel");
+            jadwalTabel.innerHTML = "";
+
+            data.jadwal[hari].forEach(item => {
+                let row = `<tr>
+                    <td>${item.waktu}</td>
+                    <td>${item.pelajaran}</td>
+                </tr>`;
+                jadwalTabel.innerHTML += row;
+            });
+        }
+
+        // Tampilkan jadwal hari Senin saat halaman pertama kali dibuka
+        tampilkanJadwal();
+    </script>
 </body>
 </html>

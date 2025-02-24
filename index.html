@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen">
+        <img src="assets/logo.png" alt="Logo Kelas">
+    </div>
+
+    <!-- LOGIN PAGE -->
+    <div class="container login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Masukkan Nama">
+        <input type="password" id="password" placeholder="Kode Kelas">
+        <button onclick="login()">Masuk</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="container dashboard">
+        <h1>Selamat Datang di Web Kelas</h1>
+        <div class="menu">
+            <a href="jadwal.html">📅 Jadwal</a>
+            <a href="materi.html">📚 Materi</a>
+            <a href="absensi.html">✅ Absensi</a>
+            <a href="pengumuman.html">📢 Pengumuman</a>
+            <a href="forum.html">💬 Forum</a>
+            <a href="#" onclick="toggleDarkMode()">🌙 Mode Gelap</a>
+        </div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -8,33 +8,27 @@
 </head>
 <body>
 
-    <!-- LOADING SCREEN -->
-    <div class="loading-screen">
-        <img src="assets/logo.png" alt="Logo Kelas">
+    <!-- Logo -->
+    <img src="images/logo.png" alt="Logo Kelas" class="logo">
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <a href="jadwal.html">📅 Jadwal</a>
+        <a href="materi.html">📖 Materi</a>
+        <a href="absensi.html">✅ Absensi</a>
+        <a href="pengumuman.html">📢 Pengumuman</a>
+        <a href="forum.html">💬 Forum</a>
+        <a href="#" id="dark-mode">🌙 Mode Gelap</a>
+    </nav>
+
+    <!-- Container Fitur -->
+    <div class="container">
+        <div class="fitur"><a href="jadwal.html">📅 Jadwal</a></div>
+        <div class="fitur"><a href="materi.html">📖 Materi</a></div>
+        <div class="fitur"><a href="absensi.html">✅ Absensi</a></div>
+        <div class="fitur"><a href="pengumuman.html">📢 Pengumuman</a></div>
+        <div class="fitur"><a href="forum.html">💬 Forum</a></div>
     </div>
 
-    <!-- LOGIN PAGE -->
-    <div class="container login-box">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Masukkan Nama">
-        <input type="password" id="password" placeholder="Kode Kelas">
-        <button onclick="login()">Masuk</button>
-    </div>
-
-    <!-- DASHBOARD -->
-    <div class="container dashboard">
-        <h1>Selamat Datang di Web Kelas</h1>
-        <div class="menu">
-            <a href="jadwal.html">📅 Jadwal</a>
-            <a href="materi.html">📚 Materi</a>
-            <a href="absensi.html">✅ Absensi</a>
-            <a href="pengumuman.html">📢 Pengumuman</a>
-            <a href="forum.html">💬 Forum</a>
-            <a href="#" onclick="toggleDarkMode()">🌙 Mode Gelap</a>
-        </div>
-        <button class="logout-btn" onclick="logout()">Logout</button>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

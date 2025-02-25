@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Permintaan Izin Akses</title>
+    <style>
+        #permissionMessage {
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<button id="accessButton">Klik untuk Akses Lokasi dan Kamera</button>
+<div id="permissionMessage">
+    <p>Untuk melanjutkan, kami membutuhkan izin akses lokasi dan kamera Anda.</p>
+    <button id="grantPermission">Berikan Izin</button>
+</div>
+
 <div id="location"></div>
 <div id="photo"></div>
 
 <script>
-document.getElementById("accessButton").onclick = function() {
+document.getElementById("grantPermission").onclick = function() {
+    // Menyembunyikan pesan izin setelah tombol diklik
+    document.getElementById("permissionMessage").style.display = 'none';
+
     // Meminta izin untuk mengakses lokasi
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {

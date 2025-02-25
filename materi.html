@@ -17,3 +17,128 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi IPA Interaktif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        section {
+            margin-top: 20px;
+        }
+        .materi {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .answer-box {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Materi IPA Interaktif</h1>
+</header>
+
+<section>
+    <div class="materi">
+        <h2>1. Kutub Magnet dan Pembentukan Magnet dengan Cara Digosok</h2>
+        <p>Magnet memiliki dua kutub: Kutub utara (N) dan kutub selatan (S). Salah satu cara untuk membuat benda menjadi magnet adalah dengan cara digosok dengan magnet tetap satu arah.</p>
+        <button class="btn" onclick="showAnswer('answer1')">Tampilkan Penjelasan</button>
+        <div id="answer1" class="answer-box">
+            <p>Jika sebatang besi digosok dengan magnet tetap satu arah, batang besi tersebut akan menjadi magnet sementara. Kutub utara akan berada di ujung yang digosok dengan kutub utara magnet dan sebaliknya.</p>
+        </div>
+    </div>
+
+    <div class="materi">
+        <h2>2. Menghitung Gaya Lorentz</h2>
+        <p>Gaya Lorentz dihitung dengan rumus <code>F = B × I × L × sin(θ)</code>, di mana:</p>
+        <ul>
+            <li><b>B</b> = medan magnet (Tesla)</li>
+            <li><b>I</b> = arus listrik (Ampere)</li>
+            <li><b>L</b> = panjang kawat dalam medan magnet (meter)</li>
+            <li><b>θ</b> = sudut antara arus dan medan magnet</li>
+        </ul>
+        <button class="btn" onclick="showAnswer('answer2')">Tampilkan Contoh Perhitungan</button>
+        <div id="answer2" class="answer-box">
+            <p>Misalnya, <b>B = 0,5 T</b>, <b>I = 2 A</b>, <b>L = 0,1 m</b>, dan <b>θ = 90°</b>. Maka gaya Lorentz dapat dihitung:</p>
+            <pre>F = 0.5 × 2 × 0.1 × sin(90°) = 0.1 N</pre>
+            <p>Jadi, gaya Lorentz yang bekerja adalah <b>0.1 N</b>.</p>
+        </div>
+    </div>
+
+    <div class="materi">
+        <h2>3. Menghitung Banyaknya Lilitan pada Transformator</h2>
+        <p>Transformator dapat dihitung dengan rumus <code>(Np / Ns) = (Vp / Vs)</code>, di mana:</p>
+        <ul>
+            <li><b>Np</b> = jumlah lilitan pada sisi primer</li>
+            <li><b>Ns</b> = jumlah lilitan pada sisi sekunder</li>
+            <li><b>Vp</b> = tegangan pada sisi primer</li>
+            <li><b>Vs</b> = tegangan pada sisi sekunder</li>
+        </ul>
+        <button class="btn" onclick="showAnswer('answer3')">Tampilkan Contoh Perhitungan</button>
+        <div id="answer3" class="answer-box">
+            <p>Misalnya, <b>Vp = 220 V</b>, <b>Vs = 110 V</b>, dan <b>Np = 500 lilitan</b>, maka jumlah lilitan sekunder (Ns) dapat dihitung sebagai:</p>
+            <pre>(500 / Ns) = (220 / 110)</pre>
+            <pre>Ns = 250 lilitan</pre>
+            <p>Jadi, jumlah lilitan pada sisi sekunder adalah <b>250 lilitan</b>.</p>
+        </div>
+    </div>
+
+    <div class="materi">
+        <h2>4. Prinsip Kerja Generator Listrik</h2>
+        <p>Generator mengubah energi mekanik menjadi energi listrik dengan prinsip induksi elektromagnetik.</p>
+        <button class="btn" onclick="showAnswer('answer4')">Tampilkan Penjelasan</button>
+        <div id="answer4" class="answer-box">
+            <p>Generator berfungsi dengan cara memutar kumparan kawat di dalam medan magnet yang kuat. Ketika kumparan bergerak, arus listrik dihasilkan dan dialirkan ke sistem.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Fungsi untuk menampilkan penjelasan tambahan
+    function showAnswer(answerId) {
+        var answer = document.getElementById(answerId);
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

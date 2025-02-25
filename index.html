@@ -26,9 +26,9 @@
             font-size: 24px;
             font-weight: bold;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
             animation: slideDown 1s ease-in-out;
         }
 
@@ -122,22 +122,23 @@
         }
         
         function navigateTo(page) {
-            alert("Navigasi ke " + page);
+            window.location.href = page.toLowerCase().replace(/ /g, "_") + ".html";
         }
     </script>
 </head>
 <body>
 
 <div class="header">
-    🤖 Selamat Datang di <span style="color: #25D366;">TUNGGA.AI</span>
+    <img src="logo.png" alt="TUNGGA.AI Logo" height="40">
+    <div>🤖 Selamat Datang di <span style="color: #25D366;">TUNGGA.AI</span></div>
 </div>
 
 <div class="menu">
-    <a href="#" onclick="navigateTo('Jadwal')">📅 Jadwal</a>
-    <a href="#" onclick="navigateTo('Materi')">📖 Materi</a>
-    <a href="#" onclick="navigateTo('Absensi')">✅ Absensi</a>
-    <a href="#" onclick="navigateTo('Pengumuman')">📢 Pengumuman</a>
-    <a href="#" onclick="navigateTo('Ruang Diskusi')">💬 Ruang diskusi</a>
+    <a href="jadwal.html">📅 Jadwal</a>
+    <a href="materi.html">📖 Materi</a>
+    <a href="absensi.html">✅ Absensi</a>
+    <a href="pengumuman.html">📢 Pengumuman</a>
+    <a href="ruang_diskusi.html">💬 Ruang diskusi</a>
 </div>
 
 <div class="chat-container">

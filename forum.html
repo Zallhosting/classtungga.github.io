@@ -4,18 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum Diskusi</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #111;
+            color: white;
+        }
+        .chat-container {
+            width: 80vw;
+            height: 80vh;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+        }
+        .messages {
+            border: none;
+            padding: 10px;
+            height: 70vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .message {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        .self {
+            background-color: #25D366;
+            color: white;
+            align-self: flex-end;
+        }
+        .other {
+            background-color: #fff;
+            color: black;
+            align-self: flex-start;
+        }
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        input, button {
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #128C7E;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>💬 Forum Diskusi</h1>
-        <div class="chat-box" id="chat-box"></div>
-        <input type="text" id="chat-input" placeholder="Ketik pesan...">
+<div class="chat-container">
+    <h3>Forum Diskusi</h3>
+    <div class="messages" id="messages"></div>
+    <div class="input-container">
+        <input type="text" id="chatInput" placeholder="Ketik pesan...">
         <button onclick="sendMessage()">Kirim</button>
-        <a href="index.html">⬅ Kembali</a>
     </div>
+    <div class="input-container">
+        <input type="file" id="fileInput" accept="image/*, audio/*">
+        <button onclick="sendFile()">Kirim File</button>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<script>
+    function sendMessage() {
+        let input = document.getElementById("chatInput");
+        let messages = document.getElementById("messages");
+        
+        if (input.value.trim() !== "") {
+            let messageDiv = document.createElement("div");
+            messageDiv.classList.add("message", "self");
+            messageDiv.innerText = input.value;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+            input.value = "";
+        }
+    }
+    
+    function sendFile() {
+        let fileInput = document.getElementById("fileInput");
+        let messages = document.getElementById("messages");
+        
+        if (fileInput.files.length > 0) {
+            let file = fileInput.files[0];
+            let messageDiv = document.createElement("div");
+            messageDiv.classList.add("message", "self");
+            
+            if (file.type.startsWith("image/")) {
+                let img = document.createElement("img");
+                img.src = URL.createObjectURL(file);
+                img.style.maxWidth = "200px";
+                messageDiv.appendChild(img);
+            } else if (file.type.startsWith("audio/")) {
+                let audio = document.createElement("audio");
+                audio.controls = true;
+                audio.src = URL.createObjectURL(file);
+                messageDiv.appendChild(audio);
+            } else {
+                let link = document.createElement("a");
+                link.href = URL.createObjectURL(file);
+                link.textContent = "Unduh file";
+                link.download = file.name;
+                messageDiv.appendChild(link);
+            }
+            
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+    }
+</script>
+
 </body>
 </html>

@@ -3,57 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLASSTUNGGA DEV</title>
-    <script src="script.js" defer></script>
+    <title>Classtungga Dev</title>
+    <style>
+        /* Gaya untuk Splash Screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .splash-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #000; /* Latar belakang hitam */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            z-index: 1000;
+            transition: opacity 1s ease-out;
+        }
+
+        .splash-text {
+            font-size: 28px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        /* Efek animasi teks */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Efek menghilang */
+        .fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Gaya halaman utama */
+        .container {
+            display: none;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #008000; /* Hijau */
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .card {
+            width: 150px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            transition: transform 0.2s ease-in-out, background 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #008000; /* Hijau saat hover */
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splash">
+        <h1 class="splash-text">Selamat Datang di <span style="color:#00ff00;">Classtungga Dev</span></h1>
+        <p class="splash-text">AI-powered Smart Classroom</p>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="container" id="main-content">
+        <h1>Selamat Datang di Classtungga Dev</h1>
+        <p>Silakan pilih fitur yang tersedia:</p>
+        
+        <div class="card-container">
+            <div class="card">📅 Jadwal</div>
+            <div class="card">📖 Materi</div>
+            <div class="card">✅ Absensi</div>
+            <div class="card">📢 Pengumuman</div>
+        </div>
+    </div>
+
+    <script>
+        // Tunggu 3 detik lalu hilangkan splash screen
+        setTimeout(() => {
+            document.getElementById("splash").classList.add("fade-out");
+            setTimeout(() => {
+                document.getElementById("splash").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }, 1000);
+        }, 3000);
+    </script>
+
 </body>
 </html>
-
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("CLASSTUNGGA DEV Loaded!");
-
-    // Membuat elemen utama
-    const container = document.createElement("div");
-    container.classList.add("container");
-    
-    // Header
-    const header = document.createElement("header");
-    header.innerHTML = `
-        <img src="logo.png" alt="TUNGGA.AI Logo" class="logo">
-        <h1>Selamat Datang di CLASSTUNGGA DEV</h1>
-        <p>AI-powered Smart Classroom</p>
-    `;
-    
-    // Card Container
-    const cardContainer = document.createElement("div");
-    cardContainer.classList.add("card-container");
-    
-    // Data untuk kartu
-    const cardsData = [
-        { icon: "jadwal-icon.png", title: "📅 Jadwal", desc: "Lihat jadwal kelas terbaru" },
-        { icon: "materi-icon.png", title: "📖 Materi", desc: "Akses materi pembelajaran" },
-        { icon: "absensi-icon.png", title: "✅ Absensi", desc: "Cek kehadiranmu" },
-        { icon: "pengumuman-icon.png", title: "📢 Pengumuman", desc: "Informasi terbaru dari kelas" }
-    ];
-    
-    // Generate kartu secara dinamis
-    cardsData.forEach(data => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `
-            <img src="${data.icon}" alt="${data.title}">
-            <div class="card-text">
-                <h2>${data.title}</h2>
-                <p>${data.desc}</p>
-            </div>
-        `;
-        card.addEventListener("click", () => alert(`Anda mengklik ${data.title}`));
-        cardContainer.appendChild(card);
-    });
-    
-    // Menambahkan elemen ke halaman
-    container.appendChild(header);
-    container.appendChild(cardContainer);
-    document.body.appendChild(container);
-});

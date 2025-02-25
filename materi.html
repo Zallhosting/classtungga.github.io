@@ -42,8 +42,8 @@
         }
         .answer-box {
             display: none;
-            background-color: #e3e3e3; /* Mengganti warna latar belakang menjadi abu-abu muda */
-            color: #333; /* Mengganti warna teks menjadi lebih gelap */
+            background-color: #e3e3e3;
+            color: #333;
             padding: 10px;
             border: 1px solid #ccc;
             margin-top: 10px;
@@ -58,6 +58,7 @@
 </header>
 
 <section>
+    <!-- Materi 1 -->
     <div class="materi">
         <h2>1. Kutub Magnet dan Pembentukan Magnet dengan Cara Digosok</h2>
         <p>Magnet memiliki dua kutub: Kutub utara (N) dan kutub selatan (S). Salah satu cara untuk membuat benda menjadi magnet adalah dengan cara digosok dengan magnet tetap satu arah.</p>
@@ -67,47 +68,89 @@
         </div>
     </div>
 
+    <!-- Materi 2 -->
     <div class="materi">
-        <h2>2. Menghitung Gaya Lorentz</h2>
-        <p>Gaya Lorentz dihitung dengan rumus <code>F = B × I × L × sin(θ)</code>, di mana:</p>
-        <ul>
-            <li><b>B</b> = medan magnet (Tesla)</li>
-            <li><b>I</b> = arus listrik (Ampere)</li>
-            <li><b>L</b> = panjang kawat dalam medan magnet (meter)</li>
-            <li><b>θ</b> = sudut antara arus dan medan magnet</li>
-        </ul>
-        <button class="btn" onclick="showAnswer('answer2')">Tampilkan Contoh Perhitungan</button>
+        <h2>2. Kutub Magnet pada Pembuatan Magnet Menggunakan Arus Listrik</h2>
+        <p>Magnet dapat dibuat dengan cara mengalirkan arus listrik melalui kawat. Gaya magnet terbentuk di sekitar kawat yang dialiri arus listrik.</p>
+        <button class="btn" onclick="showAnswer('answer2')">Tampilkan Penjelasan</button>
         <div id="answer2" class="answer-box">
-            <p>Misalnya, <b>B = 0,5 T</b>, <b>I = 2 A</b>, <b>L = 0,1 m</b>, dan <b>θ = 90°</b>. Maka gaya Lorentz dapat dihitung:</p>
-            <pre>F = 0.5 × 2 × 0.1 × sin(90°) = 0.1 N</pre>
-            <p>Jadi, gaya Lorentz yang bekerja adalah <b>0.1 N</b>.</p>
+            <p>Ketika arus listrik mengalir melalui kawat yang dibentuk dalam bentuk koil, sebuah medan magnet akan terbentuk di sekitar kawat tersebut. Kutub magnet tergantung pada arah aliran arus dan bentuk kumparan.</p>
         </div>
     </div>
 
+    <!-- Materi 3 -->
     <div class="materi">
-        <h2>3. Menghitung Banyaknya Lilitan pada Transformator</h2>
-        <p>Transformator dapat dihitung dengan rumus <code>(Np / Ns) = (Vp / Vs)</code>, di mana:</p>
-        <ul>
-            <li><b>Np</b> = jumlah lilitan pada sisi primer</li>
-            <li><b>Ns</b> = jumlah lilitan pada sisi sekunder</li>
-            <li><b>Vp</b> = tegangan pada sisi primer</li>
-            <li><b>Vs</b> = tegangan pada sisi sekunder</li>
-        </ul>
-        <button class="btn" onclick="showAnswer('answer3')">Tampilkan Contoh Perhitungan</button>
+        <h2>3. Menghilangkan Sifat Magnet Suatu Benda</h2>
+        <p>Beberapa benda yang awalnya bersifat magnet dapat kehilangan sifat magnetnya jika dikenai perlakuan tertentu.</p>
+        <button class="btn" onclick="showAnswer('answer3')">Tampilkan Penjelasan</button>
         <div id="answer3" class="answer-box">
-            <p>Misalnya, <b>Vp = 220 V</b>, <b>Vs = 110 V</b>, dan <b>Np = 500 lilitan</b>, maka jumlah lilitan sekunder (Ns) dapat dihitung sebagai:</p>
-            <pre>(500 / Ns) = (220 / 110)</pre>
-            <pre>Ns = 250 lilitan</pre>
-            <p>Jadi, jumlah lilitan pada sisi sekunder adalah <b>250 lilitan</b>.</p>
+            <p>Sifat magnet pada benda dapat dihilangkan dengan cara memanaskan benda tersebut hingga suhu tinggi atau memukul benda dengan keras. Kedua perlakuan ini dapat menyebabkan partikel magnetik dalam benda menjadi tidak teratur, sehingga benda tersebut kehilangan sifat magnetiknya.</p>
         </div>
     </div>
 
+    <!-- Materi 4 -->
     <div class="materi">
-        <h2>4. Prinsip Kerja Generator Listrik</h2>
-        <p>Generator mengubah energi mekanik menjadi energi listrik dengan prinsip induksi elektromagnetik.</p>
-        <button class="btn" onclick="showAnswer('answer4')">Tampilkan Penjelasan</button>
+        <h2>4. Menghitung Gaya Lorentz pada Sebuah Rangkaian</h2>
+        <p>Gaya Lorentz adalah gaya yang bekerja pada muatan listrik yang bergerak dalam medan magnet.</p>
+        <button class="btn" onclick="showAnswer('answer4')">Tampilkan Contoh Perhitungan</button>
         <div id="answer4" class="answer-box">
-            <p>Generator berfungsi dengan cara memutar kumparan kawat di dalam medan magnet yang kuat. Ketika kumparan bergerak, arus listrik dihasilkan dan dialirkan ke sistem.</p>
+            <p>Rumus gaya Lorentz: <code>F = B × I × L × sin(θ)</code></p>
+            <pre>Misalnya: B = 0,5 T, I = 2 A, L = 0,1 m, θ = 90°</pre>
+            <pre>F = 0,5 × 2 × 0,1 × sin(90°) = 0,1 N</pre>
+            <p>Jadi, gaya Lorentz yang bekerja adalah 0,1 N.</p>
+        </div>
+    </div>
+
+    <!-- Materi 5 -->
+    <div class="materi">
+        <h2>5. Menghitung Banyaknya Lilitan pada Transformator</h2>
+        <p>Transformator menggunakan prinsip induksi elektromagnetik untuk mengubah tegangan listrik.</p>
+        <button class="btn" onclick="showAnswer('answer5')">Tampilkan Contoh Perhitungan</button>
+        <div id="answer5" class="answer-box">
+            <p>Rumus transformator: <code>(Np / Ns) = (Vp / Vs)</code></p>
+            <pre>Misalnya: Vp = 220 V, Vs = 110 V, Np = 500 lilitan</pre>
+            <pre>Ns = (Vp / Vs) × Np = (220 / 110) × 500 = 250 lilitan</pre>
+            <p>Jumlah lilitan pada sisi sekunder adalah 250 lilitan.</p>
+        </div>
+    </div>
+
+    <!-- Materi 6 -->
+    <div class="materi">
+        <h2>6. Alat yang Memanfaatkan Prinsip Kemagnetan</h2>
+        <p>Banyak alat yang memanfaatkan prinsip kemagnetan dalam operasionalnya.</p>
+        <button class="btn" onclick="showAnswer('answer6')">Tampilkan Penjelasan</button>
+        <div id="answer6" class="answer-box">
+            <p>Beberapa alat yang memanfaatkan prinsip kemagnetan antara lain kompas, motor listrik, generator, dan transformator. Semua alat ini menggunakan prinsip medan magnet untuk menghasilkan gerakan atau arus listrik.</p>
+        </div>
+    </div>
+
+    <!-- Materi 7 -->
+    <div class="materi">
+        <h2>7. Fungsi Medan Magnet pada Makhluk Hidup</h2>
+        <p>Medan magnet dapat mempengaruhi makhluk hidup dalam beberapa cara.</p>
+        <button class="btn" onclick="showAnswer('answer7')">Tampilkan Penjelasan</button>
+        <div id="answer7" class="answer-box">
+            <p>Beberapa penelitian menunjukkan bahwa medan magnet dapat mempengaruhi navigasi beberapa hewan, seperti burung migran dan lebah. Medan magnet bumi membantu mereka dalam menentukan arah selama perjalanan.</p>
+        </div>
+    </div>
+
+    <!-- Materi 8 -->
+    <div class="materi">
+        <h2>8. Pendapat dan Solusi Berdasarkan Berita</h2>
+        <p>Anda diminta untuk memberikan pendapat dan solusi berdasarkan berita yang disajikan.</p>
+        <button class="btn" onclick="showAnswer('answer8')">Tampilkan Contoh Pendapat</button>
+        <div id="answer8" class="answer-box">
+            <p>Misalnya, jika berita tentang polusi udara, kita bisa memberikan solusi dengan mengurangi penggunaan kendaraan bermotor dan meningkatkan penggunaan transportasi umum.</p>
+        </div>
+    </div>
+
+    <!-- Materi 9 -->
+    <div class="materi">
+        <h2>9. Mekanisme Produksi Listrik pada Pembangkit Listrik Tenaga Angin</h2>
+        <p>Pembangkit listrik tenaga angin menghasilkan listrik dengan mengubah energi kinetik angin menjadi energi listrik.</p>
+        <button class="btn" onclick="showAnswer('answer9')">Tampilkan Penjelasan</button>
+        <div id="answer9" class="answer-box">
+            <p>Proses ini dilakukan dengan menggunakan turbin angin yang berputar akibat tiupan angin. Putaran turbin menggerakkan generator untuk menghasilkan listrik.</p>
         </div>
     </div>
 </section>

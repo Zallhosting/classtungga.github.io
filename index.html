@@ -26,7 +26,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 32px;
+            font-size: 18px;
             font-weight: bold;
             z-index: 9999;
             animation: fadeOut 2s ease-in-out 3s forwards;
@@ -90,7 +90,7 @@
 
         .background-section {
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             background: url('https://blogger.googleusercontent.com/img/a/AVvXsEj5YogkuPfe0tQ2nY6kFoy35toujZ6UqKApQE5kpTbJhMXMAH6HhVY1HqybYYteMLx10bGGkOTKA0hjk991HxDywHSSayObGqj6NDR9YHPn4dCudKNPQhhUfFQayXLcDoqFLMDf06I67o90i2EhB84sUvS6VutJfVtxdq2t_Hx1V5htrA9iG0moEiJvBw=w1200-h630-p-k-no-nu') no-repeat center center;
             background-size: cover;
             display: flex;
@@ -112,12 +112,21 @@
 
         /* Responsif */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .feature-menu {
                 flex-direction: column;
-                align-items: flex-end;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
             }
+
             .background-section {
-                height: auto;
+                padding: 10px;
+                min-height: auto;
             }
         }
     </style>
@@ -148,9 +157,7 @@
             <p><strong>Perkenalan Classtungga Dev:</strong><br><br>
                 Classtungga Dev adalah wadah bagi siapa saja yang ingin belajar, berkembang, dan menciptakan solusi inovatif di dunia teknologi. Kami percaya bahwa setiap individu memiliki potensi untuk memahami dan menguasai berbagai aspek pengembangan digital, mulai dari pemrograman, desain web, hingga keamanan siber.
                 <br><br>
-                Kami tidak hanya membangun sistem dan aplikasi, tetapi juga menyediakan ruang untuk pembelajaran yang berkelanjutan. Tujuan kami adalah menciptakan lingkungan yang mendukung eksplorasi teknologi secara praktis dan aplikatif. Dengan berbagi wawasan, tutorial, dan pengalaman, kami ingin membantu individu serta komunitas mengasah keterampilan mereka di dunia digital.
-                <br><br>
-                Kami berkomitmen untuk memberikan materi yang mudah dipahami, proyek yang menantang, serta wawasan terbaru agar siapa pun bisa mulai belajar—baik pemula maupun mereka yang ingin meningkatkan keahlian. Dengan semangat kolaborasi dan inovasi, Classtungga Dev siap menjadi bagian dari perjalanan belajar dan pengembangan teknologi Anda.
+                Kami tidak hanya membangun sistem dan aplikasi, tetapi juga menyediakan ruang untuk pembelajaran yang berkelanjutan. 
                 <br><br>
                 Mari bersama-sama menciptakan solusi dan menjelajahi dunia digital tanpa batas! 🚀
             </p>

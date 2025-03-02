@@ -2,42 +2,46 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>CLASSTUNGGA DEV</title>
-</head>
-<body>
-
-<!-- Menambahkan logo di atas halaman -->
-<header>
-    <img src="https://raw.githubusercontent.com/zallhosting/repository-kelastungga/main/IMG_20250208221608594.jpg
-" alt="Logo" style="width: 150px;">
-</header>
-
-</body>
-</html>
-
     <style>
-        /* Gaya untuk Splash Screen */
+        /* Gaya Global */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            background: white;
+            text-align: center;
         }
 
+        .background-section {
+            width: 100%;
+            height: 300px;
+            background: url('https://cdn.antaranews.com/cache/1200x800/2019/11/26/kemendikbud.jpg') no-repeat center center;
+            background-size: cover;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+
+        /* Splash Screen */
         .splash-screen {
             position: fixed;
             width: 100%;
             height: 100%;
-            background: #000; /* Latar belakang hitam */
+            background: #000;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             color: white;
-            text-align: center;
             z-index: 1000;
             transition: opacity 1s ease-out;
         }
@@ -49,81 +53,124 @@
             animation: fadeIn 2s ease-in-out forwards;
         }
 
-        /* Efek animasi teks */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Efek menghilang */
         .fade-out {
             opacity: 0;
             pointer-events: none;
         }
 
-        /* Gaya halaman utama */
-        .container {
-            display: none;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        h1 {
-            color: #008000; /* Hijau */
-        }
-
-        .card-container {
+        /* Header */
+        header {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #222;
+        }
+
+        header img {
+            width: 150px;
+            border-radius: 8px;
+        }
+
+        /* Fitur Berbaris di Kanan Atas */
+        .feature-menu {
+            display: flex;
             gap: 15px;
         }
 
-        .card {
-            width: 150px;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            background-color: #f5f5f5;
-            transition: transform 0.5s ease-in-out, background 0.1s;
+        .feature-menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+            background: #008000;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
-        .card:hover {
-            transform: scale(1.05);
-            background-color: #008000; /* Hijau saat hover */
+        .feature-menu a:hover {
+            background: #006400;
+        }
+
+        /* Garis Pembatas */
+        .separator {
+            width: 80%;
+            height: 2px;
+            background: #222;
+            margin: 40px auto;
+        }
+
+        /* Layanan Bulat di Sudut Kanan Bawah */
+        .floating-service {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #008000;
             color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .floating-service:hover {
+            transform: scale(1.1);
+            background: #006400;
+        }
+
+        .floating-service img {
+            width: 35px;
+            height: 35px;
         }
     </style>
 </head>
 <body>
-
     <!-- Splash Screen -->
     <div class="splash-screen" id="splash">
-        <h1 class="splash-text">Selamat Datang di <span style="color:#00ff00;">Classtungga Dev</span></h1>
-        <p class="splash-text">"Kuasailah lah teknologi untuk membantu orang lain, bukan untuk menguasai orang lain"</p>
+        <h1 class="splash-text"><span style="color:#006600;">Selamat Datang di</span> <span style="color:#00ff00;">Classtungga Dev</span></h1>
+        <p class="splash-text">"Kuasailah teknologi untuk membantu orang lain, bukan untuk menguasai orang lain"</p>
     </div>
+
+    <!-- Header -->
+    <header>
+        <img src="https://www.gokerja.id/wp-content/uploads/2022/10/Evans-Indonesia-300x179.jpg" alt="Classtungga Dev">
+        <div class="feature-menu">
+            <a href="jadwal.html">📅 Jadwal</a>
+            <a href="materi.html">📖 Materi</a>
+            <a href="absensi.html">✅ Absensi</a>
+            <a href="pengumuman.html">📢 Pengumuman</a>
+        </div>
+    </header>
 
     <!-- Konten Utama -->
     <div class="container" id="main-content">
-        <h1>Selamat Datang di Classtungga Dev</h1>
-        <p>Silakan pilih fitur yang tersedia:</p>
+        <h1><span style="color:#006600;">Selamat Datang di</span> <span style="color:#00ff00;">Classtungga Dev</span></h1>
+        <p>Silakan pilih fitur yang tersedia di menu atas.</p>
+        <div class="separator"></div>
         
-        <div class="card-container">
-            <a href="jadwal.html" class="card">📅 Jadwal</a>
-            <a href="materi.html" class="card">📖 Materi</a>
-            <a href="absensi.html" class="card">✅ Absensi</a>
-            <a href="pengumuman.html" class="card">📢 Pengumuman</a>
+        <!-- Background dengan teks perkenalan di dalamnya -->
+        <div class="background-section">
+            <p style="color: black;"><strong>Perkenalan Classtungga Dev:</strong> <br> (Teks perkenalan akan ditambahkan di sini)</p>
         </div>
     </div>
 
+    <!-- Layanan Bulat di Sudut Bawah Kanan -->
+    <div class="floating-service" onclick="alert('Layanan Bantuan Sedang Dikerjakan!')">
+        <img src="https://cdn-icons-png.flaticon.com/512/201/201634.png" alt="Layanan Bantuan">
+    </div>
+
     <script>
-        // Tunggu 7 detik lalu hilangkan splash screen
         setTimeout(() => {
             document.getElementById("splash").classList.add("fade-out");
             setTimeout(() => {
@@ -132,6 +179,5 @@
             }, 1000);
         }, 5000);
     </script>
-
 </body>
 </html>

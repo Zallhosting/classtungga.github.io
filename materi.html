@@ -3,169 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi IPA Interaktif</title>
+    <title>Materi Pelajaran</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
+            background: url('https://wallpaperaccess.com/full/4269152.jpg') no-repeat center center fixed;
+            background-size: cover;
             text-align: center;
-            padding: 10px;
         }
-        section {
-            margin-top: 20px;
-        }
-        .materi {
-            background-color: white;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: auto;
+        }
+        .card {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background: #45a049;
         }
         h2 {
-            color: #4CAF50;
-        }
-        .btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        .answer-box {
-            display: none;
-            background-color: #e3e3e3;
             color: #333;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-top: 10px;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Materi IPA Interaktif</h1>
-</header>
-
-<section>
-    <!-- Materi 1 -->
-    <div class="materi">
-        <h2>1. Kutub Magnet dan Pembentukan Magnet dengan Cara Digosok</h2>
-        <p>Magnet memiliki dua kutub: Kutub utara (N) dan kutub selatan (S). Salah satu cara untuk membuat benda menjadi magnet adalah dengan cara digosok dengan magnet tetap satu arah.</p>
-        <button class="btn" onclick="showAnswer('answer1')">Tampilkan Penjelasan</button>
-        <div id="answer1" class="answer-box">
-            <p>Jika sebatang besi digosok dengan magnet tetap satu arah, batang besi tersebut akan menjadi magnet sementara. Kutub utara akan berada di ujung yang digosok dengan kutub utara magnet dan sebaliknya.</p>
-        </div>
+    <h2>Daftar Mata Pelajaran SMP</h2>
+    <div class="container">
+        <div class="card">Matematika</div>
+        <div class="card">Bahasa Indonesia</div>
+        <div class="card">Bahasa Inggris</div>
+        <div class="card">Ilmu Pengetahuan Alam (IPA)</div>
+        <div class="card">Ilmu Pengetahuan Sosial (IPS)</div>
+        <div class="card">Pendidikan Pancasila dan Kewarganegaraan (PPKn)</div>
+        <div class="card">Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK)</div>
+        <div class="card">Seni Budaya</div>
+        <div class="card">Informatika</div>
+        <div class="card">Pendidikan Agama Islam</div>
     </div>
-
-    <!-- Materi 2 -->
-    <div class="materi">
-        <h2>2. Kutub Magnet pada Pembuatan Magnet Menggunakan Arus Listrik</h2>
-        <p>Magnet dapat dibuat dengan cara mengalirkan arus listrik melalui kawat. Gaya magnet terbentuk di sekitar kawat yang dialiri arus listrik.</p>
-        <button class="btn" onclick="showAnswer('answer2')">Tampilkan Penjelasan</button>
-        <div id="answer2" class="answer-box">
-            <p>Ketika arus listrik mengalir melalui kawat yang dibentuk dalam bentuk koil, sebuah medan magnet akan terbentuk di sekitar kawat tersebut. Kutub magnet tergantung pada arah aliran arus dan bentuk kumparan.</p>
-        </div>
-    </div>
-
-    <!-- Materi 3 -->
-    <div class="materi">
-        <h2>3. Menghilangkan Sifat Magnet Suatu Benda</h2>
-        <p>Beberapa benda yang awalnya bersifat magnet dapat kehilangan sifat magnetnya jika dikenai perlakuan tertentu.</p>
-        <button class="btn" onclick="showAnswer('answer3')">Tampilkan Penjelasan</button>
-        <div id="answer3" class="answer-box">
-            <p>Sifat magnet pada benda dapat dihilangkan dengan cara memanaskan benda tersebut hingga suhu tinggi atau memukul benda dengan keras. Kedua perlakuan ini dapat menyebabkan partikel magnetik dalam benda menjadi tidak teratur, sehingga benda tersebut kehilangan sifat magnetiknya.</p>
-        </div>
-    </div>
-
-    <!-- Materi 4 -->
-    <div class="materi">
-        <h2>4. Menghitung Gaya Lorentz pada Sebuah Rangkaian</h2>
-        <p>Gaya Lorentz adalah gaya yang bekerja pada muatan listrik yang bergerak dalam medan magnet.</p>
-        <button class="btn" onclick="showAnswer('answer4')">Tampilkan Contoh Perhitungan</button>
-        <div id="answer4" class="answer-box">
-            <p>Rumus gaya Lorentz: <code>F = B × I × L × sin(θ)</code></p>
-            <pre>Misalnya: B = 0,5 T, I = 2 A, L = 0,1 m, θ = 90°</pre>
-            <pre>F = 0,5 × 2 × 0,1 × sin(90°) = 0,1 N</pre>
-            <p>Jadi, gaya Lorentz yang bekerja adalah 0,1 N.</p>
-        </div>
-    </div>
-
-    <!-- Materi 5 -->
-    <div class="materi">
-        <h2>5. Menghitung Banyaknya Lilitan pada Transformator</h2>
-        <p>Transformator menggunakan prinsip induksi elektromagnetik untuk mengubah tegangan listrik.</p>
-        <button class="btn" onclick="showAnswer('answer5')">Tampilkan Contoh Perhitungan</button>
-        <div id="answer5" class="answer-box">
-            <p>Rumus transformator: <code>(Np / Ns) = (Vp / Vs)</code></p>
-            <pre>Misalnya: Vp = 220 V, Vs = 110 V, Np = 500 lilitan</pre>
-            <pre>Ns = (Vp / Vs) × Np = (220 / 110) × 500 = 250 lilitan</pre>
-            <p>Jumlah lilitan pada sisi sekunder adalah 250 lilitan.</p>
-        </div>
-    </div>
-
-    <!-- Materi 6 -->
-    <div class="materi">
-        <h2>6. Alat yang Memanfaatkan Prinsip Kemagnetan</h2>
-        <p>Banyak alat yang memanfaatkan prinsip kemagnetan dalam operasionalnya.</p>
-        <button class="btn" onclick="showAnswer('answer6')">Tampilkan Penjelasan</button>
-        <div id="answer6" class="answer-box">
-            <p>Beberapa alat yang memanfaatkan prinsip kemagnetan antara lain kompas, motor listrik, generator, dan transformator. Semua alat ini menggunakan prinsip medan magnet untuk menghasilkan gerakan atau arus listrik.</p>
-        </div>
-    </div>
-
-    <!-- Materi 7 -->
-    <div class="materi">
-        <h2>7. Fungsi Medan Magnet pada Makhluk Hidup</h2>
-        <p>Medan magnet dapat mempengaruhi makhluk hidup dalam beberapa cara.</p>
-        <button class="btn" onclick="showAnswer('answer7')">Tampilkan Penjelasan</button>
-        <div id="answer7" class="answer-box">
-            <p>Beberapa penelitian menunjukkan bahwa medan magnet dapat mempengaruhi navigasi beberapa hewan, seperti burung migran dan lebah. Medan magnet bumi membantu mereka dalam menentukan arah selama perjalanan.</p>
-        </div>
-    </div>
-
-    <!-- Materi 8 -->
-    <div class="materi">
-        <h2>8. Pendapat dan Solusi Berdasarkan Berita</h2>
-        <p>Anda diminta untuk memberikan pendapat dan solusi berdasarkan berita yang disajikan.</p>
-        <button class="btn" onclick="showAnswer('answer8')">Tampilkan Contoh Pendapat</button>
-        <div id="answer8" class="answer-box">
-            <p>Misalnya, jika berita tentang polusi udara, kita bisa memberikan solusi dengan mengurangi penggunaan kendaraan bermotor dan meningkatkan penggunaan transportasi umum.</p>
-        </div>
-    </div>
-
-    <!-- Materi 9 -->
-    <div class="materi">
-        <h2>9. Mekanisme Produksi Listrik pada Pembangkit Listrik Tenaga Angin</h2>
-        <p>Pembangkit listrik tenaga angin menghasilkan listrik dengan mengubah energi kinetik angin menjadi energi listrik.</p>
-        <button class="btn" onclick="showAnswer('answer9')">Tampilkan Penjelasan</button>
-        <div id="answer9" class="answer-box">
-            <p>Proses ini dilakukan dengan menggunakan turbin angin yang berputar akibat tiupan angin. Putaran turbin menggerakkan generator untuk menghasilkan listrik.</p>
-        </div>
-    </div>
-</section>
-
-<script>
-    // Fungsi untuk menampilkan penjelasan tambahan
-    function showAnswer(answerId) {
-        var answer = document.getElementById(answerId);
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
-        }
-    }
-</script>
-
 </body>
 </html>

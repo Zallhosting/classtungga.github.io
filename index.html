@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLASSTUNGGA DEV</title>
     <style>
-      
         /* Gaya Global */
         body, html {
             margin: 0;
@@ -17,61 +16,14 @@
             text-align: center;
         }
 
-        /* Splash Screen */
-        #splash {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background: black;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            font-weight: bold;
-            z-index: 9999;
-            animation: fadeOut 2s ease-in-out 3s forwards;
-        }
-
-        #splash span {
-            display: block;
-            opacity: 0;
-            animation: fadeInText 1.5s ease-in-out forwards;
-        }
-
-        #splash span:nth-child(1) {
-            color: #00ff00;
-        }
-
-        #splash span:nth-child(2) {
-            color: white;
-            animation-delay: 0.5s;
-        }
-
-        @keyframes fadeOut {
-            to {
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-
-        @keyframes fadeInText {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 15px 20px;
             background: black;
+            color: white;
         }
 
         header img {
@@ -80,15 +32,24 @@
 
         .feature-menu {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         .feature-menu a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
+        .feature-menu a:hover {
+            background: #00ff00;
+            color: black;
+        }
+
+        /* Background Section */
         .background-section {
             width: 100%;
             min-height: 100vh;
@@ -102,45 +63,33 @@
             font-weight: bold;
             padding: 20px;
             text-align: justify;
+            flex-direction: column;
         }
 
-        .background-section p {
+        .content-container {
             max-width: 900px;
             background: rgba(255, 255, 255, 0.8);
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
         }
 
-        /* Responsif */
+        .content-box {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
         @media (max-width: 768px) {
-            header {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 10px;
-            }
-
-            .feature-menu {
-                flex-direction: row;
-                gap: 10px;
-            }
-
-            .background-section {
-                padding: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: justify;
+            .content-box {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Splash Screen -->
-    <div id="splash">
-        <span>Welcome To Classtungga Dev</span>
-        <span>"Kuasailah teknologi untuk membantu orang lain, bukan untuk menguasai orang lain"</span>
-    </div>
-
     <!-- Header -->
     <header>
         <img src="https://www.gokerja.id/wp-content/uploads/2022/10/Evans-Indonesia-300x179.jpg" alt="Classtungga Dev">
@@ -157,30 +106,26 @@
         <h1><span style="color:#006600;">Selamat Datang di Classtungga Dev</span> <span style="color:#00ff00;"> – Ruang Belajar dan Inovasi siswa/i!</span></h1>
         <p>Silakan pilih fitur yang tersedia di menu kanan atas.</p>
         <div class="background-section">
-            <p><strong>Tujuan Classtungga Dev:</strong><br><br>
-                Classtungga Dev hadir sebagai platform edukasi yang mendukung mahasiswa dalam mengembangkan keterampilan akademik dan profesional sesuai dengan visi dan misi Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek). Kami berkomitmen untuk mendorong pembelajaran yang inovatif, berbasis teknologi, serta relevan dengan kebutuhan industri dan perkembangan zaman.
-                <br><br>
-                <p><strong>Misi classtungga Dev:</strong><br><br>
-                📚 Meningkatkan Literasi dan Numerasi
-Membantu siswa memahami pelajaran dengan lebih mudah melalui materi interaktif, latihan soal, dan pembahasan yang simpel.
-
-🌍 Membangun Karakter Pelajar Pancasila
-Menanamkan nilai-nilai seperti gotong royong, berpikir kritis, dan kreatif agar siswa tidak hanya cerdas secara akademik, tetapi juga siap menghadapi dunia nyata.
-
-💡 Mengembangkan Kreativitas dan Teknologi
-Mendorong siswa untuk berpikir inovatif, mengenal teknologi, serta mengembangkan keterampilan digital agar siap menghadapi era modern.
-
-🤝 Mendukung Pembelajaran Mandiri
-Membantu siswa belajar kapan saja dan di mana saja, sesuai dengan konsep Merdeka Belajar yang memberi kebebasan dalam mengeksplorasi minat dan bakat mereka.
-            <p><strong>Kenapa Harus Gabung? :</strong><br><br>
-              ✅ Belajar Jadi Lebih Mudah & Menyenangkan – Materi disajikan secara sederhana, menarik, dan mudah dipahami.
-✅ Persiapan Ujian & Latihan Soal – Dapatkan pembahasan soal-soal penting dengan cara yang jelas dan mudah diingat.
-✅ Menjadi Generasi Kreatif & Berkarakter – Tidak hanya pintar secara akademik, tapi juga memiliki sikap yang baik dan siap menghadapi masa depan.
-
-🎯 Bersama Classtungga Dev, Belajar Jadi Lebih Seru dan Bermakna! 🚀
-
-Mari bersama-sama membangun masa depan yang lebih cerah dengan semangat belajar dan inovasi. Classtungga Dev – Teman Belajar Mahasiswa untuk Masa Depan Gemilang! 🚀
-            </p>
+            <div class="content-container">
+                <div class="content-box">
+                    <p><strong>Visi Classtungga Dev:</strong><br>
+                        Menjadi platform edukasi terbaik yang membantu mahasiswa dan pelajar dalam mengembangkan keterampilan akademik dan profesional, sesuai dengan visi Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek).</p>
+                </div>
+                <div class="content-box">
+                    <p><strong>Misi Classtungga Dev:</strong><br>
+                        📚 <strong>Meningkatkan Literasi dan Numerasi</strong> – Memudahkan pemahaman pelajaran dengan materi interaktif dan latihan soal yang simpel.<br>
+                        🌍 <strong>Membangun Karakter Pelajar Pancasila</strong> – Menanamkan nilai-nilai gotong royong, berpikir kritis, dan kreativitas agar siap menghadapi dunia nyata.<br>
+                        💡 <strong>Mengembangkan Kreativitas dan Teknologi</strong> – Mendorong siswa untuk berpikir inovatif dan menguasai keterampilan digital untuk masa depan.<br>
+                        🤝 <strong>Mendukung Pembelajaran Mandiri</strong> – Membantu siswa belajar kapan saja dan di mana saja sesuai konsep Merdeka Belajar.</p>
+                </div>
+                <div class="content-box" style="width: 100%;">
+                    <p><strong>Kenapa Harus Gabung?</strong><br>
+                        ✅ <strong>Belajar Lebih Mudah & Menyenangkan</strong> – Materi disajikan secara sederhana, menarik, dan mudah dipahami.<br>
+                        ✅ <strong>Persiapan Ujian & Latihan Soal</strong> – Pembahasan soal-soal penting dengan cara yang jelas dan mudah diingat.<br>
+                        ✅ <strong>Menjadi Generasi Kreatif & Berkarakter</strong> – Tidak hanya pintar secara akademik, tapi juga memiliki sikap yang baik dan siap menghadapi masa depan.</p>
+                </div>
+            </div>
+            <p><strong>🎯 Bersama Classtungga Dev, Belajar Jadi Lebih Seru dan Bermakna! 🚀</strong></p>
         </div>
     </div>
 </body>

@@ -5,57 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Pelajaran</title>
     <style>
+        /* Styling umum */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: black;
+            color: white;
         }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: black;
+            background: #222;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
+
         h1 {
-            color: #008000;
+            color: #4ADE80;
         }
+
+        /* Tabel */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            background: white;
+            background: #121212;
         }
+
         th, td {
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid white;
             text-align: center;
         }
+
         th {
-            background-color: #008000;
+            background-color: #1E5128;
             color: white;
         }
-        .pink { background-color: #ffb6c1; }
-        .green { background-color: #90ee90; }
-        .blue { background-color: #add8e6; }
-        .purple { background-color: #dda0dd; }
-        .yellow { background-color: #ffff99; }
-        
+
+        /* Warna unik untuk setiap mata pelajaran */
+        .ips { background-color: #FF69B4; color: black; } /* IPS */
+        .art { background-color: #FFD700; color: black; } /* ART */
+        .ipa { background-color: #4682B4; color: white; } /* IPA */
+        .bin { background-color: #8A2BE2; color: white; } /* B. IND */
+        .math { background-color: #32CD32; color: black; } /* MATH */
+        .pp { background-color: #D2691E; color: white; } /* PP */
+        .pai { background-color: #D3D3D3; color: black; } /* PAI */
+        .pjok { background-color: #FF4500; color: white; } /* PJOK */
+        .inf { background-color: #DAA520; color: black; } /* INF */
+        .eng { background-color: #1E90FF; color: white; } /* ENG */
+
+        /* Tombol kembali */
         .back-button {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 15px;
-            background: #008000;
-            color: white;
+            background: #4ADE80;
+            color: black;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
         }
+
         .back-button:hover {
-            background: #005500;
+            background: #1E5128;
+            color: white;
         }
     </style>
     <link rel="icon" href="https://png.pngtree.com/png-clipart/20230405/original/pngtree-the-islamic-icon-greeting-of-ramadan-mubarak-is-round-with-a-png-image_9027525.png" type="image/x-icon">
@@ -74,67 +92,67 @@
             </tr>
             <tr>
                 <td>07.45 - 08.30</td>
-                <td class="pink">IPS</td>
-                <td class="green">MATH</td>
-                <td class="blue">IPA</td>
-                <td class="green">ENG</td>
+                <td class="ips">IPS</td>
+                <td class="math">MATH</td>
+                <td class="ipa">IPA</td>
+                <td class="eng">ENG</td>
             </tr>
             <tr>
                 <td>08.30 - 09.15</td>
-                <td class="pink">IPS</td>
-                <td class="green">ENG</td>
-                <td class="blue">IPA</td>
-                <td class="green">ENG</td>
+                <td class="ips">IPS</td>
+                <td class="eng">ENG</td>
+                <td class="ipa">IPA</td>
+                <td class="eng">ENG</td>
             </tr>
             <tr>
                 <td>09.15 - 10.00</td>
-                <td class="purple">ART</td>
-                <td class="green">ENG</td>
-                <td class="pink">PAI/K</td>
-                <td class="yellow">MATH</td>
+                <td class="art">ART</td>
+                <td class="eng">ENG</td>
+                <td class="pai">PAI/K</td>
+                <td class="math">MATH</td>
             </tr>
             <tr>
-                <td class="yellow">10.00 - 10.30</td>
+                <td class="pjok">10.00 - 10.30</td>
                 <td colspan="4">ISTIRAHAT</td>
             </tr>
             <tr>
                 <td>10.30 - 11.15</td>
-                <td class="blue">IPA</td>
-                <td class="purple">B. IN</td>
-                <td class="pink">IPS</td>
-                <td class="pink">PAI/PAK</td>
+                <td class="ipa">IPA</td>
+                <td class="bin">B. IN</td>
+                <td class="ips">IPS</td>
+                <td class="pai">PAI/PAK</td>
             </tr>
             <tr>
                 <td>11.15 - 12.00</td>
-                <td class="blue">IPA</td>
-                <td class="purple">B. IN</td>
-                <td class="purple">ART</td>
-                <td class="pink">PAI/PAK</td>
+                <td class="ipa">IPA</td>
+                <td class="bin">B. IN</td>
+                <td class="art">ART</td>
+                <td class="pai">PAI/PAK</td>
             </tr>
             <tr>
-                <td class="yellow">12.00 - 12.45</td>
+                <td class="pjok">12.00 - 12.45</td>
                 <td colspan="4">ISTIRAHAT</td>
             </tr>
             <tr>
                 <td>12.45 - 13.30</td>
-                <td class="blue">IPA</td>
-                <td class="pink">IPS</td>
-                <td class="purple">ART</td>
-                <td class="yellow">PJOK</td>
+                <td class="ipa">IPA</td>
+                <td class="ips">IPS</td>
+                <td class="art">ART</td>
+                <td class="pjok">PJOK</td>
             </tr>
             <tr>
                 <td>13.30 - 14.15</td>
-                <td class="purple">B. IN</td>
-                <td class="pink">PP</td>
-                <td class="yellow">MATH</td>
-                <td class="green">INF</td>
+                <td class="bin">B. IN</td>
+                <td class="pp">PP</td>
+                <td class="math">MATH</td>
+                <td class="inf">INF</td>
             </tr>
             <tr>
                 <td>14.15 - 15.00</td>
-                <td class="purple">B. IN</td>
-                <td class="pink">PP</td>
-                <td class="yellow">MATH</td>
-                <td class="green">INF</td>
+                <td class="bin">B. IN</td>
+                <td class="pp">PP</td>
+                <td class="math">MATH</td>
+                <td class="inf">INF</td>
             </tr>
         </table>
         <a href="index.html" class="back-button">Kembali</a>

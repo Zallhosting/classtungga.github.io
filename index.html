@@ -50,13 +50,13 @@
         .background-section {
             width: 100%;
             min-height: 100vh;
-            background: url('https://blogger.googleusercontent.com/img/a/AVvXsEj5YogkuPfe0tQ2nY6kFoy35toujZ6UqKApQE5kpTbJhMXMAH6HhVY1HqybYYteMLx10bGGkOTKA0hjk991HxDywHSSayObGqj6NDR9YHPn4dCudKNPQhhUfFQayXLcDoqFLMDf06I67o90i2EhB84sUvS6VutJfVtxdq2t_Hx1V5htrA9iG0moEiJvBw=w1200-h630-p-k-no-nu') no-repeat center center/cover;
+            background: url('https://blogger.googleusercontent.com/img/a/AVvXsEj5YogkuPfe0tQ2nY6kFoy35toujZ6UqKApQE5kpTbJhMXMAH6HhVY1HqybYYteMLx10bGGkOTKA0hjk991HxDywHSSayObGqj6NDR9YHPn4dCudKNPQhhUfFQayXLcDoqFLMDf06I67o90i2EhB84sUvS6VutJfVtxdq2t_Hx1V5htrA9iG0moEiJvBw=w1200-h630-p-k-no-nu') no-repeat center center;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             color: black;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             padding: 20px;
             text-align: justify;
@@ -72,6 +72,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             text-align: left;
+            align-items: center;
         }
 
         .content-box {
@@ -79,9 +80,31 @@
             margin-bottom: 20px;
         }
 
+        .content-box img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
         @media (max-width: 768px) {
+            .background-section {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .content-box {
                 width: 100%;
+            }
+
+            .content-box img {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
             }
         }
     </style>
@@ -99,7 +122,8 @@
             <a href="google.html">🎓 Google</a>
         </div>
     </header>
-        <img src="https://3.bp.blogspot.com/-IowZCADWnOY/XHF3rhNr5yI/AAAAAAAAntg/nwEpaTNYJNQNb9ElAsEOPijjhSoDJ6FrgCLcBGAs/w680/large_1524717863logo%2BEVANS.jpg" alt="Classtungga Dev">
+   <img src="https://3.bp.blogspot.com/-IowZCADWnOY/XHF3rhNr5yI/AAAAAAAAntg/nwEpaTNYJNQNb9ElAsEOPijjhSoDJ6FrgCLcBGAs/w680/large_1524717863logo%2BEVANS.jpg" alt="Classtungga Dev">
+
     <div class="container" id="main-content">
         <h1><span style="color:#006600;">Selamat Datang di Classtungga Dev</span> <span style="color:#00ff00;"> – Ruang Belajar dan Inovasi siswa/i!</span></h1>
         <p>Silakan pilih fitur yang tersedia di menu kanan atas.</p>
@@ -107,17 +131,20 @@
             <div class="content-container">
                 <div class="content-box">
                     <p><strong>Visi Classtungga Dev:</strong><br>
-                        Menjadi platform edukasi terbaik yang membantu mahasiswa dan pelajar dalam mengembangkan keterampilan akademik dan profesional, sesuai dengan visi Kementerian Pendidikan,
+                        Menjadi platform edukasi terbaik yang membantu mahasiswa dan pelajar dalam mengembangkan keterampilan akademik dan profesional, sesuai dengan visi Kementerian Pendidikan.
                     </p>
-                </div>
-                <div class="content-box">
-                    <img src="https://kfmap.asia/storage/thumbs/storage/photos/ID.KUKAR.PS.EISD/ID.KUKAR.PS.EISD_1.jpg" alt="Classtungga Dev" style="max-width: 100%; height: auto; border-radius: 8px;">
                     <p><strong>Misi Classtungga Dev:</strong><br>
-                        📚 <strong>Meningkatkan Literasi dan Numerasi</strong> – Memudahkan pemahaman pelajaran dengan masteri interaktif dan latihan soal yang simpel.<br>
+                        📚 <strong>Meningkatkan Literasi dan Numerasi</strong> – Memudahkan pemahaman pelajaran dengan materi interaktif dan latihan soal yang simpel.<br>
                         🌍 <strong>Membangun Karakter Pelajar Pancasila</strong> – Menanamkan nilai-nilai gotong royong, berpikir kritis, dan kreativitas agar siap menghadapi dunia nyata.<br>
                         💡 <strong>Mengembangkan Kreativitas dan Teknologi</strong> – Mendorong siswa untuk berpikir inovatif dan menguasai keterampilan digital untuk masa depan.<br>
                         🤝 <strong>Mendukung Pembelajaran Mandiri</strong> – Membantu siswa belajar kapan saja dan di mana saja sesuai konsep Merdeka Belajar.
                     </p>
+                </div>
+                <div class="content-box">
+                    <img src="https://kfmap.asia/storage/thumbs/storage/photos/ID.KUKAR.PS.EISD/ID.KUKAR.PS.EISD_1.jpg" alt="Classtungga Dev">
+                </div>
+                <div class="content-box">
+                    <img src="https://i.ytimg.com/vi/S8wIIXnHW-s/maxresdefault.jpg" alt="Gambar Edukasi">
                 </div>
             </div>
             <p><strong>🎯 Bersama Classtungga Dev, Belajar Jadi Lebih Seru dan Bermakna! 🚀</strong></p>

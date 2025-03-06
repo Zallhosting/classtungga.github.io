@@ -3,12 +3,17 @@ body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* Tabel */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    background-color: #222; /* Warna latar tabel */
 }
 
 th, td {
@@ -17,88 +22,35 @@ th, td {
     text-align: center;
 }
 
-/* Warna khusus untuk setiap mata pelajaran */
-.ips { background-color: pink; color: black; } /* IPS */
-.art { background-color: yellow; color: black; } /* ART */
-.ipa { background-color: blue; color: white; } /* IPA */
-.bin { background-color: purple; color: white; } /* B. IND */
-.math { background-color: green; color: white; } /* MATH */
-.pp { background-color: gray; color: white; } /* PP */
-.pai { background-color: lightgray; color: black; } /* PAI */
-.pjok { background-color: orange; color: black; } /* PJOK */
-.inf { background-color: darkgoldenrod; color: white; } /* INF */
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    padding: 20px;
-    background: #1E5128;
+th {
+    background-color: #1E5128;
     color: white;
 }
 
-.logo {
-    width: 100px;
-    height: auto;
-}
+/* Warna unik untuk setiap mata pelajaran */
+.ips { background-color: #FF69B4; color: black; } /* IPS - Hot Pink */
+.art { background-color: #FFD700; color: black; } /* ART - Gold */
+.ipa { background-color: #4682B4; color: white; } /* IPA - Steel Blue */
+.bin { background-color: #8A2BE2; color: white; } /* B. IND - Blue Violet */
+.math { background-color: #32CD32; color: black; } /* MATH - Lime Green */
+.pp { background-color: #D2691E; color: white; } /* PP - Chocolate */
+.pai { background-color: #D3D3D3; color: black; } /* PAI - Light Gray */
+.pjok { background-color: #FF4500; color: white; } /* PJOK - Orange Red */
+.inf { background-color: #DAA520; color: black; } /* INF - Goldenrod */
+.eng { background-color: #1E90FF; color: white; } /* ENG - Dodger Blue */
 
-.highlight {
-    color: #4ADE80;
-}
-
-nav {
-    background: #333;
-    padding: 10px;
-}
-
-nav a {
+/* Tombol kembali */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #008000;
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
-}
-
-nav a:hover {
-    background: #4ADE80;
-    color: black;
-}
-
-.chat-container {
-    max-width: 600px;
-    margin: 30px auto;
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.chat-box {
-    text-align: left;
-    background: #444;
-    padding: 15px;
     border-radius: 5px;
-    height: 300px;
-    overflow-y: auto;
+    transition: background 0.3s;
 }
 
-input, button {
-    padding: 10px;
-    margin: 5px;
-    font-size: 16px;
-}
-
-button {
-    background: #4ADE80;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #1E5128;
-    color: white;
+.back-button:hover {
+    background: #005500;
 }

@@ -63,49 +63,55 @@
             flex-direction: column;
         }
 
+        .contact-container {
+            background: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-card {
+            text-align: left;
+        }
+
+        .contact-card h2 {
+            border-bottom: 3px solid black;
+            padding-bottom: 10px;
+        }
+
+        .contact-info {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .separator {
+            border-top: 4px solid black;
+            margin: 30px auto;
+            width: 80%;
+        }
+
         .content-container {
             max-width: 900px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            margin: 0 auto;
             text-align: left;
-            align-items: center;
-        }
-
-        .content-box {
-            width: 48%;
-            margin-bottom: 20px;
-        }
-
-        .content-box img {
-            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
 
-        @media (max-width: 768px) {
-            .background-section {
-                font-size: 14px;
-                padding: 10px;
-            }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
 
-            .content-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .content-box {
-                width: 100%;
-            }
-
-            .content-box img {
-                width: 100%;
-                height: auto;
-                display: block;
-                margin: 0 auto;
-            }
+        .image-container img {
+            width: 48%;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -124,30 +130,38 @@
     </header>
    <img src="https://3.bp.blogspot.com/-IowZCADWnOY/XHF3rhNr5yI/AAAAAAAAntg/nwEpaTNYJNQNb9ElAsEOPijjhSoDJ6FrgCLcBGAs/w680/large_1524717863logo%2BEVANS.jpg" alt="Classtungga Dev">
 
-    <div class="container" id="main-content">
+   <div class="container" id="main-content">
         <h1><span style="color:#006600;">Selamat Datang di Classtungga Dev</span> <span style="color:#00ff00;"> – Ruang Belajar dan Inovasi siswa/i!</span></h1>
         <p>Silakan pilih fitur yang tersedia di menu kanan atas.</p>
-        <div class="background-section" id="latar-belakang">
-            <div class="content-container">
-                <div class="content-box">
-                    <p><strong>Visi Classtungga Dev:</strong><br>
-                        Menjadi platform edukasi terbaik yang membantu mahasiswa dan pelajar dalam mengembangkan keterampilan akademik dan profesional, sesuai dengan visi Kementerian Pendidikan.
-                    </p>
-                    <p><strong>Misi Classtungga Dev:</strong><br>
-                        📚 <strong>Meningkatkan Literasi dan Numerasi</strong> – Memudahkan pemahaman pelajaran dengan materi interaktif dan latihan soal yang simpel.<br>
-                        🌍 <strong>Membangun Karakter Pelajar Pancasila</strong> – Menanamkan nilai-nilai gotong royong, berpikir kritis, dan kreativitas agar siap menghadapi dunia nyata.<br>
-                        💡 <strong>Mengembangkan Kreativitas dan Teknologi</strong> – Mendorong siswa untuk berpikir inovatif dan menguasai keterampilan digital untuk masa depan.<br>
-                        🤝 <strong>Mendukung Pembelajaran Mandiri</strong> – Membantu siswa belajar kapan saja dan di mana saja sesuai konsep Merdeka Belajar.
-                    </p>
-                </div>
-                <div class="content-box">
-                    <img src="https://kfmap.asia/storage/thumbs/storage/photos/ID.KUKAR.PS.EISD/ID.KUKAR.PS.EISD_1.jpg" alt="Classtungga Dev">
-                </div>
-                <div class="content-box">
-                    <img src="https://i.ytimg.com/vi/S8wIIXnHW-s/maxresdefault.jpg" alt="Gambar Edukasi">
-                </div>
+    </div>
+
+    <div class="separator"></div>
+    <div class="background-section">
+        <div class="content-container">
+            <h2>Visi Classtungga Dev</h2>
+            <p>Menjadi platform edukasi terbaik yang membantu mahasiswa dan pelajar dalam mengembangkan keterampilan akademik dan profesional, sesuai dengan visi Kementerian Pendidikan.</p>
+            <h2>Misi Classtungga Dev</h2>
+            <ul>
+                <li>📚 <strong>Meningkatkan Literasi dan Numerasi</strong> – Memudahkan pemahaman pelajaran dengan materi interaktif dan latihan soal yang simpel.</li>
+                <li>🌍 <strong>Membangun Karakter Pelajar Pancasila</strong> – Menanamkan nilai-nilai gotong royong, berpikir kritis, dan kreativitas agar siap menghadapi dunia nyata.</li>
+                <li>💡 <strong>Mengembangkan Kreativitas dan Teknologi</strong> – Mendorong siswa untuk berpikir inovatif dan menguasai keterampilan digital untuk masa depan.</li>
+                <li>🤝 <strong>Mendukung Pembelajaran Mandiri</strong> – Membantu siswa belajar kapan saja dan di mana saja sesuai konsep Merdeka Belajar.</li>
+            </ul>
+            <div class="image-container">
+                <img src="https://kfmap.asia/storage/thumbs/storage/photos/ID.KUKAR.PS.EISD/ID.KUKAR.PS.EISD_1.jpg" alt="Classtungga Dev">
+                <img src="https://i.ytimg.com/vi/S8wIIXnHW-s/maxresdefault.jpg" alt="Gambar Edukasi">
             </div>
-            <p><strong>🎯 Bersama Classtungga Dev, Belajar Jadi Lebih Seru dan Bermakna! 🚀</strong></p>
+        </div>
+    </div>
+    
+    <div class="separator"></div>
+    <div class="contact-container">
+        <div class="contact-card">
+            <h2>Hubungi Kami</h2>
+            <div class="contact-info">📍 Jalan Pendidikan No.10, Indonesia</div>
+            <div class="contact-info">📞 +62 812 3456 7890</div>
+            <div class="contact-info">✉️ classtungga@gmail.com</div>
+            <div class="contact-info">📷 @classtunggadev</div>
         </div>
     </div>
 </body>
